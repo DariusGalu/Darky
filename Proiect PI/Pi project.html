@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Geoagiu Bai</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="script.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.centered {
+    position: absolute;
+    top: 25%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+}
+.center {
+    position: absolute;
+    top: 19%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+}
+.cent {
+    position: absolute;
+    top: 5%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+}
+.centere {
+    position: absolute;
+    top: 31%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+}
+h2 span {
+   color: #483D8B; 
+   font: bold 24px/45px Georgia, Georgia; 
+   font-size: 24px;
+   letter-spacing: -1px;  
+   background: white; 
+   padding: 10px; 
+}
+a:link {
+    color: #483D8B;
+    background-color: transparent;
+    text-decoration: none;
+}
+.Geoagiu-container{
+	position: relative;
+	display: inline-block;
+}
+
+.Geoagiu-container img{
+	display:block;
+}
+.Geoagiu-container .map-selector {
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  color:#546E7A00;
+  transition-duration: .3s;
+	transition-timing-function: ease-out;
+	transition-property: top, left, right, bottom, color;
+}
+.Geoagiu-container .map-selector.hover {
+  color:#546E7A80;
+}
+.map-selector:after {
+	content: '';
+	position: absolute;
+	background: currentColor;
+	top: inherit;
+	right: inherit;
+	bottom: inherit;
+	left: inherit;
+	background: currentColor;
+	transition-duration: .3s;
+	transition-timing-function: ease-out;
+	transition-property: top, left, right, bottom, background;
+	pointer-events: none;
+}
+
+</style>
+
+<script type="text/javascript">
+	function scaleUp(obj,size){
+		obj.style.fontSize= size;
+	}
+	
+</script>
+
+</head>
+<body bgcolor="white">
+	<map name="Geoagiu" id="Geoagiu">
+		
+		<area shape="rect" coords="739,440,818,400" href="https://travelminit.ro/ro/cazare/hotel-termal-geoagiu-bai"/>
+		<area shape="rect" coords="735,217,839,260" href="https://www.listafirme.ro/all-fast-car-srl-24421430/"/>
+		<area shape="rect" coords="928,269,1001,294" href="https://www.booking.com/hotel/ro/vila-mihu.ro.html?aid=319855;label=vila-mihu-rUeVMH535oy7CRHEK2aq8AS206103159517%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi%3Atikwd-339294542634%3Alp1011845%3Ali%3Adec%3Adm;sid=7019f617e6b425e1cd62a723505a6216;dest_id=-1159953;dest_type=city;dist=0;hapos=1;hpos=1;room1=A%2CA;sb_price_type=total;srepoch=1542723230;srfid=260284e446c303411eda7770c69a99a7bd5bd8a2X1;srpvid=7a62640ff0990161;type=total;ucfs=1&#hotelTmpl"/>
+		<area shape="rect" coords="934,356,1098,381" href="http://www.agrementul.ro/"/>
+		<area shape="rect" coords="957,395,1051,435" href="https://www.facebook.com/terasadacilorgeoagiubai/"/>
+		<area shape="rect" coords="1224,324,1350,351" href="http://la-povestile-mele.blogspot.com/2018/06/operatiunea-geoagiu-muntii-apuseni-mai.html"/>
+		<area shape="rect" coords="819,484,879,522" href="https://www.tripadvisor.com/Restaurant_Review-g1096343-d8627668-Reviews-Green_Pub-Geoagiu_Bai_Hunedoara_County_Western_Romania_Transylvania.html"/>
+		<area shape="rect" coords="777,552,887,576" href="http://aventurainromania.ro/geoagiu-bai-termele-romane/"/>
+		<area shape="rect" coords="271,852,398,874" href="https://ghiocel07.wordpress.com/2017/06/12/grota-haiducilor-geoagiu/"/>
+		<area shape="rect" coords="897,526,1017,562" href="https://www.cniptgeoagiubai.ro/baile-daco-romane/"/>
+		<area shape="rect" coords="1194,509,1337,536" href="https://www.facebook.com/gabrimarox.cazarecasute"/>
+		<area shape="rect" coords="667,722,759,748" href="https://www.booking.com/hotel/ro/aida-geoagiu-bai.ro.html"/>
+		<area shape="rect" coords="1141,650,1234,674" href="https://www.booking.com/hotel/ro/diana-geoagiu-bai.ro.html"/>
+		<area shape="rect" coords="1299,694,1412,737" href="https://www.google.ro/travel/hotels/Geoagiu-B%C4%83i/place/836316630338083503/photos?ap=YhI4MzYzMTY2MzAzMzgwODM1MDM&g2lb=4181926%2C4208993%2C4209586%2C4207631%2C4219394%2C4220469&hl=ro&gl=ro&un=0&q=camping%20geoagiu%20bai&rp=OAJAAA&ictx=1&ved=0ahUKEwib-MnCn-PeAhVMEywKHQfwBb0QvS4IXzAD&tcfs=EjUKCy9nLzEyMmprcjkwEgxHZW9hZ2l1LULEg2kaGAoKMjAxOC0xMS0yNRIKMjAxOC0xMS0yNlIA&hrf=CgUIrAIQACIDUk9OKhYKBwjiDxALGBkSBwjiDxALGBoYASgAWAGaAQ4SDEdlb2FnaXUtQsSDaaIBGwoLL2cvMTIyamtyOTASDEdlb2FnaXUtQsSDaZIBAiAB"/>
+		<area shape="rect" coords="1084,750,1209,779" href="https://www.booking.com/hotel/ro/germisara-resort-spa.ro.html?aid=319855;label=germisara-resort-spa-HrEqHvLtQugzkKuJr5nsxgS261110597969%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi%3Atiaud-285284111006%3Akwd-299187215171%3Alp1011845%3Ali%3Adec%3Adm;sid=7019f617e6b425e1cd62a723505a6216;dest_id=-1159953;dest_type=city;dist=0;hapos=1;hpos=1;room1=A%2CA;sb_price_type=total;srepoch=1542726575;srfid=60285646ba1fc379d8ac68655c588ebf0a652e43X1;srpvid=935e6a978fd90032;type=total;ucfs=1&#hotelTmpl"/>
+		<area shape="rect" coords="809,852,889,896" href="https://www.google.ro/maps/uv?hl=ro&pb=!1s0x474e96c4ac0bacd3%3A0xaa9dcb6dd562a18f!2m22!2m2!1i80!2i80!3m1!2i20!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!2m2!1m1!1e6!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNX8dGMo_7IIEtmem4jpwJxNTNgs4hTHOMLKi5z%3Dw213-h160-k-no!5svila%20decebal%20geoagiu%20bai%20-%20C%C4%83utare%20Google&imagekey=!1e10!2sAF1QipNX8dGMo_7IIEtmem4jpwJxNTNgs4hTHOMLKi5z&sa=X&ved=2ahUKEwjDjZDQoOPeAhXkJcAKHeAOAvgQoiowCnoECAAQBg"/>
+		<area shape="rect" coords="893,864,970,903" href="http://www.cazari.ro/hotel_ceres_geoagiu_bai_hunedoara/"/>		
+		<area shape="rect" coords="839,927,953,957" href="https://www.booking.com/hotel/ro/vacanta.ro.html?aid=318615;label=Romanian_Romania_RO_RO_28510506025-Q4Vn7R7PWngr7Ph4YuXvKQS108017184145%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi24710367729%3Atiaud-294080458506%3Adsa-322307133353%3Alp1011845%3Ali%3Adec%3Adm;sid=7019f617e6b425e1cd62a723505a6216;dest_id=-1159953;dest_type=city;dist=0;hapos=1;hpos=1;room1=A%2CA;sb_price_type=total;srepoch=1542727017;srfid=57195ba70c71efbb2f1d6d7de8c951c38e13d99cX1;srpvid=62a26b749c17022f;type=total;ucfs=1&#hotelTmpl"/>
+		<area shape="rect" coords="712,968,832,1011" href="https://www.google.ro/maps/uv?hl=ro&pb=!1s0x474e96db4aa8d587:0xd5e1f44b6f8d05!2m22!2m2!1i80!2i80!3m1!2i20!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!2m2!1m1!1e6!3m1!7e115!4s/maps/place/af%2Bfilker%2Bfrancisc/@45.932729,23.1619991,3a,75y,178.19h,90t/data%3D*213m4*211e1*213m2*211srMxtCD88BfjGTpLLg3uosA*212e0*214m2*213m1*211s0x474e96db4aa8d587:0xd5e1f44b6f8d05!5saf+filker+francisc+-+C%C4%83utare+Google&imagekey=!1e2!2srMxtCD88BfjGTpLLg3uosA&sa=X&ved=2ahUKEwifzZ6qouPeAhWKB8AKHci_CcIQpx8wD3oECAUQBg"/>
+	</map>
+	
+	<div class="Geoagiu-container">
+		<img src="G.bai.png" alt="" usemap="#Geoagiu"/>
+		
+		<div class ="cent"><h2><span>Statiunea Geoagiu Bai MAP</span></h2></div>
+		<div class="centered"><h2><span onmouseover="scaleUp(this,'30px')" onmouseout="scaleUp(this,'20px')"><a href ="file:///C:/Users/galud/Desktop/testmap.html">Rute disponibile</a></span></h2></div>
+		<div class="center"><h2><span  onmouseover="scaleUp(this,'30px')" onmouseout="scaleUp(this,'20px')"><a href ="file:///C:/Users/galud/Desktop/Despre%20Geoagiu%20Bai.html">Despre Geoagiu-Bai</a></span></h2></div>	
+		<div class="centere"><h2><span onmouseover="scaleUp(this,'30px')" onmouseout="scaleUp(this,'20px')"><a href ="file:///C:/Users/galud/Desktop/Calculator.html">Calculator</a></span></h2></div>
+		<div class="map-selector">
+
+	</div>
+	</div>
+	<script type="text/javascript">
+
+/******************************************
+* Snow Effect Script- By Altan d.o.o. (http://www.altan.hr/snow/index.html)
+* Visit Dynamic Drive DHTML code library (http://www.dynamicdrive.com/) for full source code
+* Last updated Nov 9th, 05' by DD. This notice must stay intact for use
+******************************************/
+  function openwindow(){
+window.open("autumn_effect.htm","","width=350,height=500")
+}
+
+  //Configure below to change URL path to the snow image
+  var snowsrc="snow.gif"
+  // Configure below to change number of snow to render
+  var no = 10;
+  // Configure whether snow should disappear after x seconds (0=never):
+  var hidesnowtime = 0;
+  // Configure how much snow should drop down before fading ("windowheight" or "pageheight")
+  var snowdistance = "pageheight";
+
+///////////Stop Config//////////////////////////////////
+
+  var ie4up = (document.all) ? 1 : 0;
+  var ns6up = (document.getElementById&&!document.all) ? 1 : 0;
+
+	function iecompattest(){
+	return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+	}
+
+  var dx, xp, yp;    // coordinate and position variables
+  var am, stx, sty;  // amplitude and step variables
+  var i, doc_width = 800, doc_height = 600; 
+  
+  if (ns6up) {
+    doc_width = self.innerWidth;
+    doc_height = self.innerHeight;
+  } else if (ie4up) {
+    doc_width = iecompattest().clientWidth;
+    doc_height = iecompattest().clientHeight;
+  }
+
+  dx = new Array();
+  xp = new Array();
+  yp = new Array();
+  am = new Array();
+  stx = new Array();
+  sty = new Array();
+  snowsrc=(snowsrc.indexOf("dynamicdrive.com")!=-1)? "snow.gif" : snowsrc
+  for (i = 0; i < no; ++ i) {  
+    dx[i] = 0;                        // set coordinate variables
+    xp[i] = Math.random()*(doc_width-50);  // set position variables
+    yp[i] = Math.random()*doc_height;
+    am[i] = Math.random()*20;         // set amplitude variables
+    stx[i] = 0.02 + Math.random()/10; // set step variables
+    sty[i] = 0.7 + Math.random();     // set step variables
+		if (ie4up||ns6up) {
+      if (i == 0) {
+        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><a href=\"http://dynamicdrive.com\"><img src='"+snowsrc+"' border=\"0\"><\/a><\/div>");
+      } else {
+        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='"+snowsrc+"' border=\"0\"><\/div>");
+      }
+    }
+  }
+
+  function snowIE_NS6() {  // IE and NS6 main animation function
+    doc_width = ns6up?window.innerWidth-10 : iecompattest().clientWidth-10;
+		doc_height=(window.innerHeight && snowdistance=="windowheight")? window.innerHeight : (ie4up && snowdistance=="windowheight")?  iecompattest().clientHeight : (ie4up && !window.opera && snowdistance=="pageheight")? iecompattest().scrollHeight : iecompattest().offsetHeight;
+	if (snowdistance=="windowheight"){
+		doc_height = window.innerHeight || iecompattest().clientHeight
+	}
+	else{
+		doc_height = iecompattest().scrollHeight
+	}
+    for (i = 0; i < no; ++ i) {  // iterate for every dot
+      yp[i] += sty[i];
+      if (yp[i] > doc_height-50) {
+        xp[i] = Math.random()*(doc_width-am[i]-30);
+        yp[i] = 0;
+        stx[i] = 0.02 + Math.random()/10;
+        sty[i] = 0.7 + Math.random();
+      }
+      dx[i] += stx[i];
+      document.getElementById("dot"+i).style.top=yp[i]+"px";
+      document.getElementById("dot"+i).style.left=xp[i] + am[i]*Math.sin(dx[i])+"px";  
+    }
+    snowtimer=setTimeout("snowIE_NS6()", 10);
+  }
+
+	function hidesnow(){
+		if (window.snowtimer) clearTimeout(snowtimer)
+		for (i=0; i<no; i++) document.getElementById("dot"+i).style.visibility="hidden"
+	}
+		
+
+if (ie4up||ns6up){
+    snowIE_NS6();
+		if (hidesnowtime>0)
+		setTimeout("hidesnow()", hidesnowtime*1000)
+		}
+
+</script>
+</body>
+</html>
